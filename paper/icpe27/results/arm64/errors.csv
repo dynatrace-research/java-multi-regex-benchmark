@@ -1,0 +1,77 @@
+benchmark,params,error
+com.dynatrace.regex.benchmarks.CountBenchmark.randomRegexes,engine=Reggie;inputSize=1024;nPatterns=64,UnsupportedPatternException: generated method too large: com/datadoghq/reggie/runtime/ReggieMatcher$6a48a3cf8eb84c829a555851f82f261f.match(Ljava/lang/String;)Lcom/datadoghq/reggie/runtime/MatchResult; codeSize=70852
+com.dynatrace.regex.benchmarks.CountBenchmark.randomRegexes,engine=Reggie;inputSize=1024;nPatterns=128,UnsupportedPatternException: generated method too large: com/datadoghq/reggie/runtime/ReggieMatcher$1844e1f3b38e48ef9325b62221012f91.match(Ljava/lang/String;)Lcom/datadoghq/reggie/runtime/MatchResult; codeSize=70852
+com.dynatrace.regex.benchmarks.CountBenchmark.randomRegexes,engine=Reggie;inputSize=1024;nPatterns=256,UnsupportedPatternException: generated method too large: com/datadoghq/reggie/runtime/ReggieMatcher$3fe56eee90f04f90bd92d78adf0a488b.match(Ljava/lang/String;)Lcom/datadoghq/reggie/runtime/MatchResult; codeSize=70852
+com.dynatrace.regex.benchmarks.CountBenchmark.singleRegex,engine=Re2;workload=ATOMIC_GROUP,PatternSyntaxException: error parsing regexp: invalid or unsupported Perl syntax: `(?>`
+com.dynatrace.regex.benchmarks.CountBenchmark.singleRegex,engine=Re2;workload=BACKREFERENCE,PatternSyntaxException: error parsing regexp: invalid escape sequence: `\1`
+com.dynatrace.regex.benchmarks.CountBenchmark.singleRegex,engine=Re2;workload=LOOKAHEAD,PatternSyntaxException: error parsing regexp: invalid or unsupported Perl syntax: `(?=`
+com.dynatrace.regex.benchmarks.CountBenchmark.singleRegex,engine=SafeRe;workload=ATOMIC_GROUP,"PatternSyntaxException: invalid Perl operator near index 0
+(?>a+)b
+^"
+com.dynatrace.regex.benchmarks.CountBenchmark.singleRegex,engine=SafeRe;workload=BACKREFERENCE,"PatternSyntaxException: backreferences are not supported near index 6
+(\w+) \1
+      ^"
+com.dynatrace.regex.benchmarks.CountBenchmark.singleRegex,engine=SafeRe;workload=LOOKAHEAD,"PatternSyntaxException: invalid Perl operator: (?= near index 3
+foo(?=bar)
+   ^"
+com.dynatrace.regex.benchmarks.CountBenchmark.singleRegex,engine=DkBricsAutomaton;workload=BACKREFERENCE,UnsupportedOperationException: dk.brics.automaton has no equivalent of the escape \1 in the pattern: (\w+) \1
+com.dynatrace.regex.benchmarks.GetAllMatchesBenchmark.loghub,chunkSize=32768;datasetName=Mac;engine=Vectorscan,RuntimeException: Unable to compile pattern with id 178: Pattern is too large.
+com.dynatrace.regex.benchmarks.GetAllMatchesBenchmark.loghub,chunkSize=32768;datasetName=Mac;engine=VectorscanBatched,RuntimeException: Unable to compile pattern with id 178: Pattern is too large.
+com.dynatrace.regex.benchmarks.GetAllMatchesBenchmark.loghub,chunkSize=32768;datasetName=Mac;engine=HyperscanJava,RuntimeException: Error during database compilation: com.gliwka.hyperscan.wrapper.CompileErrorException: Pattern is too large.
+com.dynatrace.regex.benchmarks.GetAllMatchesBenchmark.randomRegexes,engine=Reggie;inputSize=1024;nPatterns=64,UnsupportedPatternException: generated method too large: com/datadoghq/reggie/runtime/ReggieMatcher$41542bfd697042378290974f6e693522.match(Ljava/lang/String;)Lcom/datadoghq/reggie/runtime/MatchResult; codeSize=70852
+com.dynatrace.regex.benchmarks.GetAllMatchesBenchmark.randomRegexes,engine=Reggie;inputSize=1024;nPatterns=128,UnsupportedPatternException: generated method too large: com/datadoghq/reggie/runtime/ReggieMatcher$e8cbfe8d3e3e4130a7e6f94c316f90a0.match(Ljava/lang/String;)Lcom/datadoghq/reggie/runtime/MatchResult; codeSize=70852
+com.dynatrace.regex.benchmarks.GetAllMatchesBenchmark.randomRegexes,engine=Reggie;inputSize=1024;nPatterns=256,UnsupportedPatternException: generated method too large: com/datadoghq/reggie/runtime/ReggieMatcher$dd620f8e0188409695c19cc2bc35da32.match(Ljava/lang/String;)Lcom/datadoghq/reggie/runtime/MatchResult; codeSize=70852
+com.dynatrace.regex.benchmarks.GetAllMatchesBenchmark.singleRegex,engine=Re2;workload=ATOMIC_GROUP,PatternSyntaxException: error parsing regexp: invalid or unsupported Perl syntax: `(?>`
+com.dynatrace.regex.benchmarks.GetAllMatchesBenchmark.singleRegex,engine=Re2;workload=BACKREFERENCE,PatternSyntaxException: error parsing regexp: invalid escape sequence: `\1`
+com.dynatrace.regex.benchmarks.GetAllMatchesBenchmark.singleRegex,engine=Re2;workload=LOOKAHEAD,PatternSyntaxException: error parsing regexp: invalid or unsupported Perl syntax: `(?=`
+com.dynatrace.regex.benchmarks.GetAllMatchesBenchmark.singleRegex,engine=SafeRe;workload=ATOMIC_GROUP,"PatternSyntaxException: invalid Perl operator near index 0
+(?>a+)b
+^"
+com.dynatrace.regex.benchmarks.GetAllMatchesBenchmark.singleRegex,engine=SafeRe;workload=BACKREFERENCE,"PatternSyntaxException: backreferences are not supported near index 6
+(\w+) \1
+      ^"
+com.dynatrace.regex.benchmarks.GetAllMatchesBenchmark.singleRegex,engine=SafeRe;workload=LOOKAHEAD,"PatternSyntaxException: invalid Perl operator: (?= near index 3
+foo(?=bar)
+   ^"
+com.dynatrace.regex.benchmarks.GetAllMatchesBenchmark.singleRegex,engine=Vectorscan;workload=ATOMIC_GROUP,RuntimeException: Unable to compile pattern with id 0: HS_FLAG_PREFILTER is not supported in combination with HS_FLAG_SOM_LEFTMOST.
+com.dynatrace.regex.benchmarks.GetAllMatchesBenchmark.singleRegex,engine=Vectorscan;workload=BACKREFERENCE,RuntimeException: Unable to compile pattern with id 0: HS_FLAG_PREFILTER is not supported in combination with HS_FLAG_SOM_LEFTMOST.
+com.dynatrace.regex.benchmarks.GetAllMatchesBenchmark.singleRegex,engine=Vectorscan;workload=LOOKAHEAD,RuntimeException: Unable to compile pattern with id 0: HS_FLAG_PREFILTER is not supported in combination with HS_FLAG_SOM_LEFTMOST.
+com.dynatrace.regex.benchmarks.GetAllMatchesBenchmark.singleRegex,engine=VectorscanBatched;workload=ATOMIC_GROUP,RuntimeException: Unable to compile pattern with id 0: HS_FLAG_PREFILTER is not supported in combination with HS_FLAG_SOM_LEFTMOST.
+com.dynatrace.regex.benchmarks.GetAllMatchesBenchmark.singleRegex,engine=VectorscanBatched;workload=BACKREFERENCE,RuntimeException: Unable to compile pattern with id 0: HS_FLAG_PREFILTER is not supported in combination with HS_FLAG_SOM_LEFTMOST.
+com.dynatrace.regex.benchmarks.GetAllMatchesBenchmark.singleRegex,engine=VectorscanBatched;workload=LOOKAHEAD,RuntimeException: Unable to compile pattern with id 0: HS_FLAG_PREFILTER is not supported in combination with HS_FLAG_SOM_LEFTMOST.
+com.dynatrace.regex.benchmarks.GetAllMatchesBenchmark.singleRegex,engine=HyperscanJava;workload=ATOMIC_GROUP,RuntimeException: Error during database compilation: com.gliwka.hyperscan.wrapper.CompileErrorException: HS_FLAG_PREFILTER is not supported in combination with HS_FLAG_SOM_LEFTMOST.
+com.dynatrace.regex.benchmarks.GetAllMatchesBenchmark.singleRegex,engine=HyperscanJava;workload=BACKREFERENCE,RuntimeException: Error during database compilation: com.gliwka.hyperscan.wrapper.CompileErrorException: HS_FLAG_PREFILTER is not supported in combination with HS_FLAG_SOM_LEFTMOST.
+com.dynatrace.regex.benchmarks.GetAllMatchesBenchmark.singleRegex,engine=HyperscanJava;workload=LOOKAHEAD,RuntimeException: Error during database compilation: com.gliwka.hyperscan.wrapper.CompileErrorException: HS_FLAG_PREFILTER is not supported in combination with HS_FLAG_SOM_LEFTMOST.
+com.dynatrace.regex.benchmarks.GetAllMatchesBenchmark.singleRegex,engine=DkBricsAutomaton;workload=BACKREFERENCE,UnsupportedOperationException: dk.brics.automaton has no equivalent of the escape \1 in the pattern: (\w+) \1
+com.dynatrace.regex.benchmarks.GrepBenchmark.randomRegexes,engine=Reggie;inputSize=1024;nPatterns=64,UnsupportedPatternException: generated method too large: com/datadoghq/reggie/runtime/ReggieMatcher$3c8ae629eddb4d348a0ac9a29860b71e.match(Ljava/lang/String;)Lcom/datadoghq/reggie/runtime/MatchResult; codeSize=70852
+com.dynatrace.regex.benchmarks.GrepBenchmark.randomRegexes,engine=Reggie;inputSize=1024;nPatterns=128,UnsupportedPatternException: generated method too large: com/datadoghq/reggie/runtime/ReggieMatcher$7758e36c286c4ed4927915da95542364.match(Ljava/lang/String;)Lcom/datadoghq/reggie/runtime/MatchResult; codeSize=70852
+com.dynatrace.regex.benchmarks.GrepBenchmark.randomRegexes,engine=Reggie;inputSize=1024;nPatterns=256,UnsupportedPatternException: generated method too large: com/datadoghq/reggie/runtime/ReggieMatcher$b5a99ecd5aac4bf5b7248d44e21f0c3b.match(Ljava/lang/String;)Lcom/datadoghq/reggie/runtime/MatchResult; codeSize=70852
+com.dynatrace.regex.benchmarks.GrepBenchmark.singleRegex,engine=Re2;workload=ATOMIC_GROUP,PatternSyntaxException: error parsing regexp: invalid or unsupported Perl syntax: `(?>`
+com.dynatrace.regex.benchmarks.GrepBenchmark.singleRegex,engine=Re2;workload=BACKREFERENCE,PatternSyntaxException: error parsing regexp: invalid escape sequence: `\1`
+com.dynatrace.regex.benchmarks.GrepBenchmark.singleRegex,engine=Re2;workload=LOOKAHEAD,PatternSyntaxException: error parsing regexp: invalid or unsupported Perl syntax: `(?=`
+com.dynatrace.regex.benchmarks.GrepBenchmark.singleRegex,engine=SafeRe;workload=ATOMIC_GROUP,"PatternSyntaxException: invalid Perl operator near index 0
+(?>a+)b
+^"
+com.dynatrace.regex.benchmarks.GrepBenchmark.singleRegex,engine=SafeRe;workload=BACKREFERENCE,"PatternSyntaxException: backreferences are not supported near index 6
+(\w+) \1
+      ^"
+com.dynatrace.regex.benchmarks.GrepBenchmark.singleRegex,engine=SafeRe;workload=LOOKAHEAD,"PatternSyntaxException: invalid Perl operator: (?= near index 3
+foo(?=bar)
+   ^"
+com.dynatrace.regex.benchmarks.GrepBenchmark.singleRegex,engine=DkBricsAutomaton;workload=BACKREFERENCE,UnsupportedOperationException: dk.brics.automaton has no equivalent of the escape \1 in the pattern: (\w+) \1
+com.dynatrace.regex.benchmarks.CompilationBenchmark.randomRegexes,engine=Reggie;inputSize=1024;nPatterns=64,UnsupportedPatternException: generated method too large: com/datadoghq/reggie/runtime/ReggieMatcher$508519d1aaaf459b951ba62ad225e96d.match(Ljava/lang/String;)Lcom/datadoghq/reggie/runtime/MatchResult; codeSize=70852
+com.dynatrace.regex.benchmarks.CompilationBenchmark.randomRegexes,engine=Reggie;inputSize=1024;nPatterns=128,UnsupportedPatternException: generated method too large: com/datadoghq/reggie/runtime/ReggieMatcher$f0b798c8a83f45e98e9fad8382ce98e3.match(Ljava/lang/String;)Lcom/datadoghq/reggie/runtime/MatchResult; codeSize=70852
+com.dynatrace.regex.benchmarks.CompilationBenchmark.randomRegexes,engine=Reggie;inputSize=1024;nPatterns=256,UnsupportedPatternException: generated method too large: com/datadoghq/reggie/runtime/ReggieMatcher$e49dcf6e24ef4a2c815c491baea02a0f.match(Ljava/lang/String;)Lcom/datadoghq/reggie/runtime/MatchResult; codeSize=70852
+com.dynatrace.regex.benchmarks.CompilationBenchmark.singleRegex,engine=Re2;workload=ATOMIC_GROUP,PatternSyntaxException: error parsing regexp: invalid or unsupported Perl syntax: `(?>`
+com.dynatrace.regex.benchmarks.CompilationBenchmark.singleRegex,engine=Re2;workload=BACKREFERENCE,PatternSyntaxException: error parsing regexp: invalid escape sequence: `\1`
+com.dynatrace.regex.benchmarks.CompilationBenchmark.singleRegex,engine=Re2;workload=LOOKAHEAD,PatternSyntaxException: error parsing regexp: invalid or unsupported Perl syntax: `(?=`
+com.dynatrace.regex.benchmarks.CompilationBenchmark.singleRegex,engine=SafeRe;workload=ATOMIC_GROUP,"PatternSyntaxException: invalid Perl operator near index 0
+(?>a+)b
+^"
+com.dynatrace.regex.benchmarks.CompilationBenchmark.singleRegex,engine=SafeRe;workload=BACKREFERENCE,"PatternSyntaxException: backreferences are not supported near index 6
+(\w+) \1
+      ^"
+com.dynatrace.regex.benchmarks.CompilationBenchmark.singleRegex,engine=SafeRe;workload=LOOKAHEAD,"PatternSyntaxException: invalid Perl operator: (?= near index 3
+foo(?=bar)
+   ^"
+com.dynatrace.regex.benchmarks.CompilationBenchmark.singleRegex,engine=DkBricsAutomaton;workload=BACKREFERENCE,UnsupportedOperationException: dk.brics.automaton has no equivalent of the escape \1 in the pattern: (\w+) \1

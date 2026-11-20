@@ -1,0 +1,7 @@
+regex-benchmark
+Copyright 2026 JKU/Dynatrace Co-Innovation Lab
+
+Portions of this software (src/main/java/com/dynatrace/regex/utils/RegexGenerator.java)
+are copyright 2026 Esteban Pérez-Wohlfeil.
+
+This product includes third-party software and data. See THIRD_PARTY_NOTICES.md.

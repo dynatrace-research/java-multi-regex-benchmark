@@ -1,0 +1,45 @@
+# System information recorded by async-profiler (JFR) during the run
+jdk.OSInformation {
+  startTime = 04:19:36.900 (2026-11-20)
+  osVersion = "uname: Linux 7.0.0-1017-aws #18-Ubuntu SMP PREEMPT Tue Oct 27 20:48:19 UTC 2026 x86_64"
+}
+
+jdk.JVMInformation {
+  startTime = 04:19:36.900 (2026-11-20)
+  jvmName = "OpenJDK 64-Bit Server VM"
+  jvmVersion = "25.0.5.1+2-1-26.04.1-Ubuntu"
+  jvmArguments = "-Djol.magicFieldOffset=true --add-opens=java.base/java.lang=ALL-UNNAMED --enable-native-access=ALL-UNNAMED --sun-misc-unsafe-memory-access=allow -XX:+UnlockDiagnosticVMOptions -XX:+DebugNonSafepoints -XX:+UnlockDiagnosticVMOptions -XX:+UnlockExperimentalVMOptions -DcompilerBlackholesEnabled=true -XX:CompileCommandFile=/tmp/jmh9201946707453005080compilecommand"
+  jvmFlags = ""
+  javaArguments = "org.openjdk.jmh.runner.ForkedMain 127.0.0.1 33137"
+  jvmStartTime = 04:19:34.790 (2026-11-20)
+  pid = 76934
+}
+
+jdk.CPUInformation {
+  startTime = 04:19:36.900 (2026-11-20)
+  cpu = "x86_64"
+  description = "processor	: 0
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 173
+model name	: Intel(R) Xeon(R) 6975P-C
+stepping	: 1
+microcode	: 0x1000434
+cpu MHz		: 3908.209
+cache size	: 491520 KB
+physical id	: 0
+siblings	: 2
+core id		: 0
+cpu cores	: 1
+apicid		: 0
+initial apicid	: 0
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 36
+wp		: yes
+"
+  sockets = 1
+  cores = 2
+  hwThreads = 2
+}
+
